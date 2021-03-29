@@ -1,0 +1,66 @@
+@media screen and (max-width:700px){
+    .Menu .Right-Nav{
+        display: none;
+    }
+}
+.Menu .Right-Nav ul .About-Us{
+    color: rgba(38, 211, 202, 0.74);
+}
+.Menu .Right-Nav ul .Home{
+    color: rgba(255, 255, 255, 0.479);
+}
+.About-Us-Container{
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    margin: auto;
+
+}
+.About-Us-Container .About-Us-Info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: " a b";
+    justify-content: start;
+    grid-gap: 5vw;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.About-Us-Info .About-Us-Text{
+    color: rgba(255, 255, 255, 0.596);
+    line-height: 2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: b;
+}
+
+.About-Us-Container .About-Us-Info .About-Us-img{
+    height: auto ;
+    width: 30vw;
+    grid-area: a;
+    
+}
+
+.About-Us-Container .About-Us-Info .About-Us-img img{
+    width: 30vw;
+
+}
+@media screen and (max-width:1024px)
+{
+    .About-Us-Container .About-Us-Info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "a" "b";
+
+    }
+    .About-Us-Container .About-Us-Info .About-Us-img{
+        width: 80vw;
+    }
+    .About-Us-Container .About-Us-Info .About-Us-img img{
+        width: 80vw;
+    }
+
+}

@@ -1,0 +1,409 @@
+.Container-2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(90deg, #202020, black);
+}
+
+.Second-Page-Header {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 3vh;
+}
+
+.Menu {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width:1024px)
+{
+    .Second-Page-Header{
+        width: 95%;
+    }
+    .Menu{
+        font-size: .7rem;
+    }
+}
+
+.Hidden-Slider{
+    display: none;
+}
+
+.Menu .Menu-Icon {
+    width: 5vw;
+    height: 5vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 4vh;
+}
+.Menu .Left-Slider{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    height: 120vh;
+    width: 45vw;
+    z-index: 3;
+    top: -7vh;
+    left:-7.2vw;
+    background: linear-gradient(90deg, rgb(10, 66, 221), rgb(38, 211, 202)) ;
+    animation-name: open;
+    animation-duration: 2s;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 7vh;
+}
+@keyframes open{
+    from{width: 0;}
+    to{width:45vw;}
+ }
+
+.Menu .Left-Slider a{
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.Menu .Left-Slider li{
+    color: rgba(255, 255, 255, 0.856);
+    list-style: disc;
+}
+.Menu .Closing-Menu {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Menu .Left-Slider li:hover{
+    color: yellowgreen !important;
+   
+}
+
+.Menu .Left-Slider ul{
+    flex-direction: column;
+    align-items:flex-start ;
+    line-height: 3;
+   
+}
+@media screen and (max-width:500px) {
+    .Menu {
+        font-size: 0.6em;
+    }
+}
+
+
+.Menu .Menu-Icon>li {
+    font-size: 3em;
+    position: relative;
+    top:0;
+    color: rgba(38, 211, 202, 0.74);
+    cursor: pointer;
+}
+
+.Menu .Right-Nav {
+    display: flex;
+    width: 60%;
+    margin-left: 5vw;
+}
+
+.Menu .Right-Nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Menu .Right-Nav ul a {
+    color: rgba(255, 255, 255, 0.479);
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.Menu .Right-Nav ul li {
+    list-style: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Menu .Right-Nav ul .Home {
+    color: rgba(38, 211, 202, 0.74);
+}
+
+.Menu .Right-Nav li:hover,
+.Menu .Right-Nav:active {
+    position: relative;
+    top: -5px;
+    color: rgba(38, 211, 202, 0.74);
+}
+
+.Menu .Menu-Icon li:active,
+.Menu .Menu-Icon li:hover {
+    font-weight: 500;
+    color: rgba(234, 238, 32, 0.575);
+   
+}
+@media screen and (max-width:700px){
+    .Menu .Right-Nav{
+        display: none;
+    }
+}
+.Logo-Container{
+    width: 5vw;
+    position: relative;
+    top: 3vh;
+    
+}
+.Logo-Container img{
+    width: 5vw;
+    height: auto;
+}
+@media screen and (max-width:700px)
+{
+    .Logo-Container{
+        width: 8vw;
+
+    }
+    .Logo-Container img{
+        width: 8vw;
+    }
+}
+
+.Main {
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main .Top-Header {
+    width: 100%;
+    height: 40vh;
+    font-family: "OCR A std";
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.Main .Top-Header hr {
+    width: 80vw;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(38, 211, 202, 0.74);
+    height: 4px;
+    border: none;
+}
+
+.Main .Top-Header h1 {
+    justify-self: center;
+    color: rgba(255, 255, 255, 0.548);
+    font-size: 0.75em;
+}
+@media screen and (max-width:500px)
+{
+    .Main .Top-Header{
+        height: 25vh;
+    }
+    .Main .Top-Header h1{
+        font-size: .6em;
+    }
+}
+.Main .Categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "item1 item2 item3";
+    justify-content: space-between;
+    width: 80vw;
+    height: auto;
+    grid-gap: 5px;
+}
+@media screen and (max-width:1024px)
+{
+    .Main .Categories{
+        display: flex;
+        flex-direction: column;
+        width:90vw ;
+    }
+}
+
+.Categories .Items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+
+.Items .Item-Header {
+    width: 100%;
+    height:52px;
+    background: linear-gradient(45deg, rgb(10, 66, 221), rgba(38, 211, 202, 0.74));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Items .Item-img{
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    
+}
+.Items .Item-img img{
+    transition: transform 0.5s linear;
+}
+.Items .Item-img img:hover{
+    transform: scale(1.25);
+}
+.Items .Item-Info{
+    background-color: whitesmoke;
+    padding: 2vw 3vw;
+    width: 100%;
+    height: 40vh;
+    color: rgb(77, 77, 77);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Items  a{
+    width: 100%;
+    height: 52px;
+    border-radius: none;
+    border: none;
+    background: linear-gradient(45deg , rgba(5, 253, 26, 0.733) , rgb(144, 196, 24) );
+    align-self: flex-end;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 1vh;
+}
+.Items  a:hover{
+   background: linear-gradient(45deg ,  rgb(144, 196, 24) ,rgba(209, 206, 27, 0.719));
+   cursor: pointer;
+ }
+ .Items .Item-Info button:active{
+     border: none;
+ }
+
+ section>hr{
+     margin-top: 7vh;
+     color: rgba(114, 114, 114, 0.534);
+     width: 95vw;
+ }
+ .Footer-Container{
+     display: grid;
+     grid-template-columns:repeat(3 , 1fr);
+     grid-template-areas: 'c a b' ;
+     color: rgba(255, 255, 255, 0.418);
+     justify-content: space-between;
+     width: 80vw;
+ }
+ .Footer-Container .Footer-text{
+     display: flex;
+     flex-wrap: wrap;
+     align-content: flex-end;
+     padding-bottom: 5vh;
+     grid-area: c;
+
+ } 
+
+ .Footer-Container .Footer-Menu{
+     display: flex;
+     justify-content: center;
+     margin-top: 20px;
+     grid-area: a;
+
+ }
+ .Footer-Container .Footer-Menu ul a{
+     text-decoration: none;
+     color: rgba(255, 255, 255, 0.418);
+     padding-bottom: 5vh ;
+ }
+ .Footer-Container .Footer-Menu ul a li{
+     list-style: none;
+     font-family:sans-serif;
+     padding-bottom: 3vh;
+ }
+ .Footer-Container .Footer-Menu ul a li:hover , 
+ .Footer-Container .Footer-Social-Media ul a:hover{
+        color: rgba(38, 211, 202, 0.74);
+ }
+ .Footer-Container .Footer-Social-Media{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.5em;
+     grid-area: b;
+ }
+ .Footer-Container .Footer-Social-Media a{
+     color: rgba(255, 255, 255, 0.418);
+     text-decoration: none;
+     padding-left: 2.5vw;
+ }
+
+ @media screen and (max-Width:600px)
+ {
+     .Footer-Container{
+         width: 100vw;
+         display: grid;
+         grid-template-columns: repeat(2 , 1fr);
+         grid-template-rows: 1fr 60px 30px;
+         grid-template-areas: 
+         'a a'
+         'b b'
+         'c c';
+         font-size: 0.7em;
+     }
+     .Footer-Container .Footer-Menu{
+         display: flex;
+         
+         justify-content: center;
+         font-size: .6em;
+         
+         
+         
+
+     }
+     .Footer-Container .Footer-Menu ul{
+         display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        justify-content: space-between;
+        padding: 10px;
+        
+     }
+     .Footer-Menu ul a li{
+         padding: 10px;
+     }
+     .Footer-Menu ul a {
+         flex-grow: 2;
+     }
+     .Footer-Container .Footer-Social-Media{
+         height: 30px;
+         display: flex;
+         justify-content: center;
+     }
+     .Footer-Container .Footer-text{
+        height: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+ }

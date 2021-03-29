@@ -1,0 +1,10 @@
+@font-face{
+font-family: 'storybook ending';
+src: url(../fonts/font-family/storybook-ending-cufonfonts-webfont/Storybook\ Ending\ D.woff) ;
+
+}
+
+@font-face{
+    font-family:"OCR A std" ;
+    src: url(../fonts/font-family/OCR-A_std/OCRAStd.woff);
+}
